@@ -1,15 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;900&display=swap');
 :root{
-  --darkBlue: rgb(31, 50, 81);
-  --white: rgb(255, 255, 255);
-  --lightGray: rgb(214, 226, 240);
-  --grayishBlue: rgb(123, 135, 157);
+  --mediumBody: 18px;
+  --white: hsl(0, 0%, 100%);
+  --Paleblue: hsl(221, 100%, 96%);
+  --lightlavender: hsl(241, 100%, 89%);
+  --darkGrayBlue: #303b5a;
+
+  --lightRed: hsl(0, 100%, 67%);
+  --orangeYellow: hsl(39, 100%, 56%);
+  --greenTeal: hsl(166, 100%, 37%);
+  --cobaltBlue: hsl(234, 85%, 45%);
+
+  /*BG Gradients*/
+  --Lightslateblue: #7857ff;  
+  --Lightroyalblue: #2e2be9;
+  /*Circle Gradients*/
+  --Violetblue: #4e21ca; 
+  --Persianblue: #2421ca;
+
+  --ff-base: "Hanken Grotesk", sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-bolder: 800;
+
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-base);
 }
 body {
-  margin: 0;
-  font-family: 'Outfit', sans-serif; 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Paleblue);
 }
+
 

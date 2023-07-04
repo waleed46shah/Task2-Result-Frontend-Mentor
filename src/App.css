@@ -1,48 +1,156 @@
-.container {
-  height: 100vh;
-  background-color: var(--lightGray);
+.card{
+  box-shadow: rgba(16, 45, 118, 0.192) 2px 3px 15px;
+  border-radius: 2rem;
+  width: 650px;
+  background-color: var(--white);
+  
+}
+.card-container{
   display: flex;
+  justify-content: space-between;
+  
+}
+.result{
+  width: 50%;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  background: linear-gradient(to bottom, var(--Lightslateblue), var(--Lightroyalblue));
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.result .title{
+  color: var(--Paleblue);
+  margin-bottom: 1rem;
+}
+.result .circle{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, var(--Violetblue), var(--Persianblue));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.circle h1{
+  color: var(--white);
+  font-size: 4rem;
+}
+.circle p{
+  color: var(--lightlavender);
+}
+.result b{
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.result .info{
+  color: var(--lightlavender);
+  margin: 1rem;
+}
 
-.card {
+.summary{
+  width: 50%;
+  padding: 1.5rem 2rem;
   display: flex;
   flex-direction: column;
-  padding: 0.8rem;
-  background-color: var(--white);
-  border-radius: 15px;
-  width: 200px;
-  height: 350px;
-}
+  gap: 1rem;
 
-.imgContainer {
-  flex: 1.5;
+}
+.summary .title{
+  color: var(--darkGrayBlue);
+}
+.rows{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
   border-radius: 10px;
-  background: url(./assets/qrCode.png) 0 0 no-repeat;
+}
+.row:nth-child(1) {
+  background-color: hsla(0, 100%, 67%, 0.2);
+}
+
+.row:nth-child(1) .badge b {
+  color: var(--lightRed);
+}
+
+.row:nth-child(2) {
+  background-color: hsla(39, 100%, 56%, 0.2);
+}
+
+.row:nth-child(2) .badge b {
+  color: var(--orangeYellow);
+}
+
+.row:nth-child(3) {
+  background-color: hsla(166, 100%, 37%, 0.2);
+}
+
+.row:nth-child(3) .badge b {
+  color: var(--greenTeal);
+}
+
+.row:nth-child(4) {
+  background-color: hsla(234, 85%, 45%, 0.2);
+}
+
+.row:nth-child(4) .badge b {
+  color: var(--cobaltBlue);
+}
+.badge{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.row p{
+  color: gray;
+}
+.btn{
+  margin-top: auto;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  background: var(--darkGrayBlue);
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--white);
+  transition: o.3s all ease-in-out;
+}
+.btn:hover{
+  background: linear-gradient(to bottom, var(--Lightslateblue), var(--Lightroyalblue));
+}
+
+@media screen and (max-width:650px) {
+  body{
+    justify-content: flex-start;
+    background: var(--white);
+  }
+  .card{
+    box-shadow: none;
+  }
+  .card-container{
+    
+    flex-direction: column;
+  }
+  .result{
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+  }
+  .result .info{
+    width: 250px;
+  }
+  .summary{
+    width: 100%;
+  }
   
-  background-size:cover;
-  
 }
-
-.textContainer {
-  flex: 0.5;
-  text-align: center;
-}
-
-h2 {
-  font-size: 16px;
-  color: var(--darkBlue);
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 15px;
-  color: var(--grayishBlue);
-}
-/* 
- --darkBlue: rgb(31, 50, 81);
-  --white: rgb(255, 255, 255);
-  --lightGray: rgb(214, 226, 240);
-  --grayishBlue: rgb(123, 135, 157);
-*/
